@@ -1,2 +1,2 @@
 # Algorithmic-Recommendation-Transparency-and-Reversibility-Social-VR
-ocial virtual reality (VR) uses headsets to immerse people in computer-generated environments where they interact through avatars to meet, talk, and play. Platforms such as VRChat and Meta’s Horizon Worlds host these spaces, and many suggest rooms or people to visit. These systems take the initiative: they start the turn without being asked.
+Social virtual reality (VR) uses headsets to immerse people in computer-generated environments where they interact through avatars to meet, talk, and play. Platforms such as VRChat and Meta’s Horizon Worlds host these spaces, and many suggest rooms or people to visit. These systems take the initiative: they start the turn without being asked.
