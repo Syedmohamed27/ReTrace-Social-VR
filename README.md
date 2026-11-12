@@ -55,7 +55,6 @@ Opening `ReTrace Social VR Final.html` directly also works in most browsers.
 
 ## Development record
 
-Commit history: https://github.com/Syedmohamed27/ReTrace-Social-VR/commits
 
 | Stage | Change and reason | Checked |
 |---|---|---|
