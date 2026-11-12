@@ -3,6 +3,8 @@
 A single-user, browser-based wooden museum for exploring two ideas about recommendations built on ambiguous behaviour: **visibility** (see why a gallery was suggested) and **reversibility** (reject the suggestion with Undo).
 
 ## Project status
+<img width="1267" height="642" alt="Screenshot 2026-11-12 at 21 42 09" src="https://github.com/user-attachments/assets/bd61264e-a22b-4438-9a09-ce49d8be1c4b" />
+
 
 **Works**
 - Four-gallery 3D wooden museum with first-person movement and collision.
