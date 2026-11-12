@@ -1,2 +1,74 @@
-# Algorithmic-Recommendation-Transparency-and-Reversibility-Social-VR
-Social virtual reality (VR) uses headsets to immerse people in computer-generated environments where they interact through avatars to meet, talk, and play. Platforms such as VRChat and Meta’s Horizon Worlds host these spaces, and many suggest rooms or people to visit. These systems take the initiative: they start the turn without being asked.
+# ReTrace Social VR
+
+**README prose word count: 625** (code blocks and setup commands excluded)
+
+A single-user, browser-based wooden museum for exploring two ideas about recommendations built on ambiguous behaviour: **visibility** (see why a gallery was suggested) and **reversibility** (reject the suggestion with Undo).
+
+## Project status
+
+**Works**
+- Four-gallery 3D wooden museum with first-person movement and collision.
+- Deliberately wrong starting recommendation (Abstract Art, 43%) with the best alternative (Pop / Street Art, 80%).
+- HUD with score bars, "View provenance details" (why the inference may be wrong) and **Undo**, which moves you to the best alternative.
+- Wrist-style panels: six editable art-style weights, a live top-three gallery ranking and arrows that jump straight to a gallery.
+- Explanation pop-up on arriving at any gallery, showing its score and the weights behind it.
+- Motion-controls panel (walk speed, sprint speed, mouse sensitivity).
+
+**Simulated**
+- The "dwell-time" inference is a fixed starting state, not real tracking.
+- "My saved preference" is hard-coded (Impressionism 50, Classical 35). Nothing is stored, and a reload resets everything.
+
+**Unfinished**
+- Headset VR, real behavioural tracking, persistent profiles, multi-user, and participant testing.
+- Portal auras (postponed) and reversal of individual weight changes (Undo only reverses the recommendation).
+- Known quirk: Impressionism and Classical share the same two weights, so their scores always tie.
+
+## Technology stack
+
+- **HTML, CSS, JavaScript** in one file, `ReTrace Social VR Final.html`: interface, scoring and scene.
+- **Three.js 0.164.1** via the `esm.sh` CDN: 3D rendering, so an internet connection is needed.
+- **Canvas textures drawn in code:** wood, signs and the artworks, which are original "studies after" the named artists rather than image reproductions.
+- **Rule-based scoring:** a gallery's score is the average of its two linked style weights. No AI model, server, database or API key.
+- **Undecided:** the headset framework (for example WebXR) and how profiles would be stored.
+
+## Running or inspecting the work
+
+Use a desktop browser with WebGL (Chrome, Edge or Firefox). There is nothing to install, and no keys.
+
+```bash
+python3 -m http.server 8000
+# open http://localhost:8000 and click "ReTrace Social VR Final.html"
+```
+
+Opening `ReTrace Social VR Final.html` directly also works in most browsers.
+
+**Controls:** click the scene to capture the mouse (`Esc` releases it) · `W A S D` or arrows move · `Shift` sprint · `Space` jump · scroll zooms · `H` toggles the HUD and wrist panels · `M` toggles the motion panel.
+
+**Suggested walkthrough**
+1. Start in Abstract Art and read the pop-up, then press `H`.
+2. Click **View provenance details**.
+3. Click **Undo this inference** and note the new gallery and explanation.
+4. Click **My saved preference**, close the pop-up, and see the weights change.
+5. Drag the sliders and use the arrows beside the top-three list.
+6. Click **Reset demonstration** to start again.
+
+## Development record
+
+Commit links: [INSERT LINKS]
+
+| Stage | Change and reason | Checked |
+|---|---|---|
+| Museum | Built the four galleries, collision and movement so the interface could be tested in a believable space without a headset. | [CONFIRM] |
+| Recommendation logic | Added rule-based scoring and the wrong starting inference to demonstrate challenging a system assumption. | Starting scores match the weights (43% and 80%). |
+| Visibility | Added the HUD, provenance details and entry pop-ups listing scores and reasons the inference may be wrong. | [CONFIRM] |
+| Reversibility | Added Undo, saved preference and weight sliders, keeping Undo separate from the weights. | [CONFIRM] Undo leaves the sliders unchanged. |
+| Attention and control | Made the HUD hideable and added `H`/`M` keys, wrist panels and jump arrows. | [CONFIRM] Ranking updates on each slider move. |
+
+## AI assistance
+
+[Chatgpt for code debugging and wherever needed in coding errors]
+
+## Additional files
+
+- `ReTrace Social VR Final.html`: the full prototype.
+- Design report: [INSERT FILENAME OR LINK] (rationale, system diagram, storyboards).
