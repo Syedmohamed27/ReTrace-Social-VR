@@ -1,9 +1,5 @@
 # ReTrace Social VR
 
-**README prose word count: 675** (code blocks and setup commands excluded)
-
-Repository: https://github.com/Syedmohamed27/ReTrace-Social-VR
-
 A single-user, browser-based wooden museum for exploring two ideas about recommendations built on ambiguous behaviour: **visibility** (see why a gallery was suggested) and **reversibility** (reject the suggestion with Undo).
 
 ## Project status
