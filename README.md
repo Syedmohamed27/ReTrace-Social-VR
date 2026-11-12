@@ -16,7 +16,7 @@ A single-user, browser-based wooden museum for exploring two ideas about recomme
 - The "dwell-time" inference is a fixed starting state, not real tracking.
 - "My saved preference" is hard-coded (Impressionism 50, Classical 35). Nothing is stored, and a reload resets everything.
 
-**Unfinished**
+**Future Development**
 - Headset VR, real behavioural tracking, persistent profiles, multi-user, and participant testing.
 - Portal auras (postponed) and reversal of individual weight changes (Undo only reverses the recommendation).
 - Known quirk: Impressionism and Classical share the same two weights, so their scores always tie.
